@@ -26,5 +26,11 @@ namespace TrackFit.Controllers
 
             return View();
         }
+        public ActionResult programming()
+        {
+            ViewBag.Message = "Create a new workout";
+
+            return View();
+        }
     }
 }

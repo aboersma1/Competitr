@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/* Home page styles */
+.front-page-info {
+    height:100px;
+}
