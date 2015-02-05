@@ -1,0 +1,64 @@
+﻿@model TrackFit.Models.StandingsViewModel
+
+@{
+    ViewBag.Title = "Standings";
+}
+@section koScripts {
+<script type="text/javascript">
+    ko.applyBindings(standingsViewModel);
+</script>
+    <script src="~/Scripts/standings.js"></script>
+    }
+
+<h2>@ViewBag.Title</h2>
+
+<div class="btn-group standings-btn-group">
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a data-list="all" href="#all">All</a></li>
+        <li role="presentation"><a data-list="indProList" href="#indPro">Individual Pro</a></li>
+        <li role="presentation"><a data-list="indOpenList" href="#indOpen">Individual Open</a></li>
+        <li role="presentation"><a data-list="teamProList" href="#teamPro">Team Pro</a></li>
+        <li role="presentation"><a data-list="teamOpenList" href="#teamOpen">Team Open</a></li>
+    </ul>
+    <div class="indProList">
+        <h2>Individual Pro</h2>
+        <ul class="list-group" data-bind="foreach: individualPro">
+            <li class="list-group-item" data-bind="attr: {athleteId: id}">
+                <span class="displayName" data-bind="text: fullName"></span>
+                <span class="badge alert-info" data-bind="text: points"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="indOpenList">
+        <h2>Individual Open</h2>
+        <ul class="list-group" data-bind="foreach: individualOpen">
+            <li class="list-group-item" data-bind="attr: {athleteId: id}">
+                <span class="displayName" data-bind="text: fullName"></span>
+                <span class="badge alert-info" data-bind="text: points"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="teamProList">
+        <h2>Team Pro</h2>
+        <ul class="list-group" data-bind="foreach: teamPro">
+            <li class="list-group-item" data-bind="attr: {athleteId: id}">
+                <span class="displayName" data-bind="text: fullName"></span>
+                <span class="badge alert-info" data-bind="text: points"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="teamOpenList">
+        <h2>Team Open</h2>
+        <ul class="list-group" data-bind="foreach: teamOpen">
+            <li class="list-group-item" data-bind="attr: {athleteId: id}">
+                <span class="displayName" data-bind="text: fullName"></span>
+                <span class="badge alert-info" data-bind="text: points"></span>
+            </li>
+        </ul>
+    </div>
+
+</div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

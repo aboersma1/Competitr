@@ -9,6 +9,7 @@
     @Scripts.Render("~/Scripts")
     <script type="text/javascript" src="~/Scripts/knockout-3.2.0.js"></script>
     <script type="text/javascript" src="~/Scripts/knockout-model.js"></script>
+
     
 </head>
 <body>
@@ -43,9 +44,8 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/site.js")
     @RenderSection("scripts", required: false)
-    <script type="text/javascript">
-    ko.applyBindings(programmingViewmodel);
-    </script>
+    @RenderSection("koScripts", false/*required*/)
 </body>
 </html>

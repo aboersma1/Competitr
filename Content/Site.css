@@ -28,3 +28,15 @@ textarea {
 .front-page-info {
     height:100px;
 }
+
+/* Stanidngs Page Styles */
+.standings-btn-group {
+    width:1170px;
+}
+.indProList, .indOpenList, .teamProList, .teamOpenList {
+    float:left;
+    width:25%;
+}
+.standings-btn-group div.fullWidth {
+    width:100%;
+}

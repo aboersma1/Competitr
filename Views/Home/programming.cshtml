@@ -1,6 +1,11 @@
 ﻿@{
     ViewBag.Title = "programming";
 }
+@section koScripts {
+<script type="text/javascript">
+    ko.applyBindings(programmingViewmodel);
+</script>
+    }
 
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
